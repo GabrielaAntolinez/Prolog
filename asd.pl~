@@ -1,0 +1,25 @@
+padreDe('Filomena','Gabriela').
+padreDe('Filomena','Alexandra').
+padreDe('Filomena','Angela').
+padreDe('Rodrigo','Gabriela').
+padreDe('Rodrigo','Alexandra').
+padreDe('Rodrigo','Angela').
+padreDe('Carmen','Filomena').
+padreDe('Carmen','Mary').
+padreDe('Carmen','Patricia').
+padreDe('MaximilianoJr','Filomena').
+padreDe('MaximilianoJr','Mary').
+padreDe('MaximilianoJr','Patricia').
+padreDe('Maximiliano','MaximilianoJr').
+padreDe('Maximiliano','Florentino').
+padreDe('Maximiliano','Misael').
+padreDe('Paulina','Misael').
+padreDe('Paulina','Florentino').
+padreDe('Paulina','MaximilianoJr').
+
+hermanosde(A,B):- padreDe(C,A),padreDe(C,B).
+hijode(A,B):-padreDe(B,A).
+abuelode(A,B):- padreDe(A,C), padreDe(C,B).
+bisabuelode(A,B):- padreDe(A,D),padreDe(D,C),padreDe(C,B).
+tiode(A,B):- padreDe(C,B),hermanosde(C,A).
+
