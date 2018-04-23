@@ -5,7 +5,11 @@ padreDe('Rodrigo','Gabriela').
 padreDe('Rodrigo','Alexandra').
 padreDe('Rodrigo','Angela').
 padreDe('Carmen','Filomena').
+padreDe('Mary','Edward').
+padreDe('Mary','Brayan').
 padreDe('Carmen','Mary').
+padreDe('Patricia','Laura').
+padreDe('Patricia','Cristian').
 padreDe('Carmen','Patricia').
 padreDe('MaximilianoJr','Filomena').
 padreDe('MaximilianoJr','Mary').
