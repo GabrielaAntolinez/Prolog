@@ -26,5 +26,5 @@ hijode(A,B):-padreDe(B,A).
 abuelode(A,B):- padreDe(A,C), padreDe(C,B).
 bisabuelode(A,B):- padreDe(A,D),padreDe(D,C),padreDe(C,B).
 tiode(A,B):- padreDe(C,B),hermanosde(A,C),A\==B.
-primode(A,B):- hermanosde(C,D),padreDe(C,A),padreDe(C,B).
+primode(A,B):- hermanosde(C,D),padreDe(C,A),padreDe(D,B).
 
