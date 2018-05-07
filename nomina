@@ -1,12 +1,12 @@
-hora_por_contraro('planta',40).
-hora_por_contrato('Tco', 40).
-hora_por_contrato('Mto',20).
-hora_por_contratp('Hc',10).
-valor_hora_categoria('Asistentes',20).
-valor_hora_categoria('Titulares',150).
-valor_hora_categoria('Auxiliares',50).
+horaporcontrato('Planta',40).
+horaporcontrato('Tco', 40).
+horaporcontrato('Mto',20).
+horaporcontratp('Hc',10).
+valorhoracategoria('Asistentes',20).
+valorhoracategoria('Titulares',150).
+valorhoracategoria('Auxiliares',50).
 descuentos('Salud', 0.15).
 descuentos('Pension',0.12).
 descuentos('Fseud',0.01).
-
-
+empleados('Alejandro','Asistentes','Planta').
+cuantogana(A,B):- empleados(A,C,D),horaporcontrato(D,E),valorhoracategoria(C,F), B is (E*F).
