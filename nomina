@@ -7,8 +7,8 @@ valorhoracategoria('Asistentes',20).
 valorhoracategoria('Titulares',150).
 valorhoracategoria('Auxiliares',50).
 
-Semestre(18,"normal").
-Semestre(4,"vacacional").
+semestre(18,"normal").
+semestre(4,"vacacional").
 
 descuentos('Salud', 0.15).
 descuentos('Pension',0.12).
@@ -19,4 +19,4 @@ cuantogana(A,B):- empleados(A,C,D),horaporcontrato(D,E),valorhoracategoria(C,F),
 
 suma([],0).
 suma([X|Xs], S):- suma(Xs, S2), S is S2 + X.
-nomina(Semestre,Total):-findall(Result,(sueldo(_,Semestre,Result)),Z), suma(Z,Total).
+nomina(Semestre,Total):-findall(Result,(cuantogana(_,Semestre,Result)),Z), suma(Z,Total).
