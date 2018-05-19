@@ -2,11 +2,21 @@ horaporcontrato('Planta',40).
 horaporcontrato('Tco', 40).
 horaporcontrato('Mto',20).
 horaporcontratp('Hc',10).
+
 valorhoracategoria('Asistentes',20).
 valorhoracategoria('Titulares',150).
 valorhoracategoria('Auxiliares',50).
+
+Semestre(18,"normal").
+Semestre(4,"vacacional").
+
 descuentos('Salud', 0.15).
 descuentos('Pension',0.12).
 descuentos('Fseud',0.01).
 empleados('Alejandro','Asistentes','Planta').
+
 cuantogana(A,B):- empleados(A,C,D),horaporcontrato(D,E),valorhoracategoria(C,F), B is (E*F).
+
+suma([],0).
+suma([X|Xs], S):- suma(Xs, S2), S is S2 + X.
+nomina(Semestre,Total):-findall(Result,(sueldo(_,Semestre,Result)),Z), suma(Z,Total).
